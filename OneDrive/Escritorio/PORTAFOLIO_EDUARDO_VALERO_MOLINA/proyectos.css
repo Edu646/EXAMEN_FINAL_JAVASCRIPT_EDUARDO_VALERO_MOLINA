@@ -1,0 +1,94 @@
+.CONTENEDOR_PRO {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#proyecto {
+  text-align: center; 
+  width: calc(33.33% - 20px); /* 3 elementos por fila, con un margen entre ellos */
+  margin: 10px 0; /* Espacio entre los elementos */
+}
+
+#proyecto img {
+  width: 60%; /* Tamaño fijo para las imágenes */
+    height: 60%; /* Mismo tamaño en altura */
+  transition: transform 0.3s ease-in-out; 
+  border-radius: 50%; /* Forma circular */
+  margin-left: 0%;
+}
+
+#proyecto p {
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; 
+  margin-top: 10px;
+}
+
+#proyecto:hover img {
+  transform: scale(1.1); 
+}
+
+#proyecto:hover p {
+  opacity: 1;
+  background-color: aqua;
+  border-radius: 5em 5em 5em 5em;
+}
+
+@media (max-width: 768px) {
+  .CONTENEDOR_PRO {
+      justify-content: space-evenly; /* Asegura que los elementos se distribuyan de manera más uniforme */
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #proyecto {
+      width: calc(50% - 20px); /* 2 elementos por fila en pantallas más pequeñas */
+  }
+
+  #proyecto img {
+    width: 15em; /* Tamaño fijo para las imágenes */
+    height: 15em; /* Mismo tamaño en altura */
+    transition: transform 0.3s ease-in-out; 
+    border-radius: 50%; /* Forma circular */
+    margin-left: 0%;
+  }
+  
+  #proyecto:hover img {
+    transform: scale(1.1); 
+  }
+
+  #proyecto:hover p {
+    opacity: 1;
+    background-color: aqua;
+    border-radius: 5em 5em 5em 5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .CONTENEDOR_PRO {
+      justify-content: space-evenly;
+  }
+
+  #proyecto {
+      width: calc(100% - 20px); /* 1 elemento por fila en pantallas muy pequeñas */
+  }
+
+  #proyecto img {
+    width: 15em; /* Tamaño fijo para las imágenes */
+    height: 15em; /* Mismo tamaño en altura */
+    transition: transform 0.3s ease-in-out; 
+    border-radius: 50%; /* Forma circular */
+    margin-left: 0%;
+  }
+  
+  #proyecto:hover img {
+    transform: scale(1.1); 
+  }
+
+  #proyecto:hover p {
+    opacity: 1;
+    background-color: aqua;
+    border-radius: 5em 5em 5em 5em;
+  }
+}
+
